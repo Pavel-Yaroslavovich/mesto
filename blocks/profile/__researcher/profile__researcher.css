@@ -1,0 +1,22 @@
+.profile__researcher {
+  width: 336px;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 16px;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .profile__researcher {
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 36px;
+    max-width: 282px;
+  }
+}

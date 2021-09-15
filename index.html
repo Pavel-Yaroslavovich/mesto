@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="pages/index.css" />
+    <title>Mesto</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img
+          class="header__logo"
+          src="./images/логотип.svg"
+          alt="логотип место"
+        />
+        <div class="line"></div>
+      </header>
+      <main class="main">
+        <section class="profile">
+          <img
+            class="profile__avatar"
+            src="./images/аватар.jpg"
+            alt="аватар Жак-Ив Кусто"
+          />
+          <div class="profile__info">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="profile__rectangle">
+              <div class="profile__vector"></div>
+            </button>
+            <p class="profile__researcher">Исследователь океана</p>
+          </div>
+          <button class="profile__rectangle-btn">
+            <div class="profile__vector-btn"></div>
+          </button>
+        </section>
+        <section class="elements">
+          <ul class="element">
+            <li class="element__card">
+              <img
+                class="element__photo"
+                src="./images/Карачаевс.jpg"
+                alt="Карачаевск"
+              />
+              <div class="element__footer">
+                <div class="element__text-heart">
+                  <p class="element__text">Карачаевск</p>
+                  <div class="element__heart"></div>
+                </div>
+              </div>
+            </li>
+            <li class="element__card">
+              <img
+                class="element__photo"
+                src="./images/Гора Эльбрус.jpg"
+                alt="Карачаевск"
+              />
+              <div class="element__footer">
+                <div class="element__text-heart">
+                  <p class="element__text">Гора Эльюрус</p>
+                  <div class="element__heart"></div>
+                </div>
+              </div>
+            </li>
+            <li class="element__card">
+              <img
+                class="element__photo"
+                src="./images/Домбай.jpg"
+                alt="Карачаевск"
+              />
+              <div class="element__footer">
+                <div class="element__text-heart">
+                  <p class="element__text">Домбай</p>
+                  <div class="element__heart"></div>
+                </div>
+              </div>
+            </li>
+            <li class="element__card">
+              <img
+                class="element__photo"
+                src="./images/Гора Эльбрус01.jpg"
+                alt="Карачаевск"
+              />
+              <div class="element__footer">
+                <div class="element__text-heart">
+                  <p class="element__text">Гора Эльбрус</p>
+                  <div class="element__heart"></div>
+                </div>
+              </div>
+            </li>
+            <li class="element__card">
+              <img
+                class="element__photo"
+                src="./images/Домбай01.jpg"
+                alt="Карачаевск"
+              />
+              <div class="element__footer">
+                <div class="element__text-heart">
+                  <p class="element__text">Домбай</p>
+                  <div class="element__heart"></div>
+                </div>
+              </div>
+            </li>
+            <li class="element__card">
+              <img
+                class="element__photo"
+                src="./images/Карачаевск01.jpg"
+                alt="Карачаевск"
+              />
+              <div class="element__footer">
+                <div class="element__text-heart">
+                  <p class="element__text">Карачаево-Черкесия</p>
+                  <div class="element__heart"></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__author">© 2021. Павел Гуров</div>
+      </footer>
+    </div>
+
+    <section class="popup">
+      <div class="popup__opened">
+        <div class="popup__container">
+          <img
+            src="./images/закрывающийКрестик.svg"
+            alt="закрывающий окно крестик"
+            class="popup__close"
+          />
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <form class="popup__form">
+            <input class="popup__name" type="text" value="Жак-Ив Кусто" />
+            <input
+              class="popup__job"
+              type="text"
+              value="Исследователь океана"
+            />
+            <button class="popup__submit">Сохранить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
