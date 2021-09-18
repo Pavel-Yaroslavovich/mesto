@@ -10,139 +10,80 @@
   <body>
     <div class="container">
       <header class="header">
-        <img
-          class="header__logo"
-          src="./images/логотип.svg"
-          alt="логотип место"
-        />
-        <div class="line"></div>
+        <img class="header__logo" src="./images/logotip.svg" alt="логотип место" />
       </header>
       <main class="main">
         <section class="profile">
-          <img
-            class="profile__avatar"
-            src="./images/аватар.jpg"
-            alt="аватар Жак-Ив Кусто"
-          />
+          <img class="profile__avatar" src="./images/avatar.jpg" alt="Аватар пользователя" />
           <div class="profile__info">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <div class="profile__rectangle">
-              <div class="profile__vector"></div>
-            </div>
+            <button class="profile__edit-button" type="edit-button"></button>
             <p class="profile__researcher">Исследователь океана</p>
           </div>
-          <div class="profile__rectangle-btn">
-            <div class="profile__vector-btn"></div>
-          </div>
+          <button class="profile__add-button" type="add-button"></button>
         </section>
         <section class="elements">
-          <ul class="element">
+          <ul class="element-list">
             <li class="element__card">
-              <img
-                class="element__photo"
-                src="./images/Карачаевс.jpg"
-                alt="Карачаевск"
-              />
+              <img class="element__photo" src="./images/karachaevsk.jpg" alt="Карачаевск" />
               <div class="element__footer">
-                <div class="element__text-heart">
-                  <p class="element__text">Карачаевск</p>
-                  <div class="element__heart"></div>
-                </div>
+                <h2 class="element__text">Карачаевск</h2>
+                <button class="element__heart" type="image"></button>
               </div>
             </li>
             <li class="element__card">
-              <img
-                class="element__photo"
-                src="./images/Гора_Эльбрус.jpg"
-                alt="Карачаевск"
-              />
+              <img class="element__photo" src="./images/gora_elbrus.jpg" alt="Карачаевск" />
               <div class="element__footer">
-                <div class="element__text-heart">
-                  <p class="element__text">Гора Эльбрус</p>
-                  <div class="element__heart"></div>
-                </div>
+                <h2 class="element__text">Гора Эльбрус</h2>
+                <button class="element__heart" type="image"></button>
               </div>
             </li>
             <li class="element__card">
-              <img
-                class="element__photo"
-                src="./images/Домбай.jpg"
-                alt="Карачаевск"
-              />
+              <img class="element__photo" src="./images/dombai.jpg" alt="Карачаевск" />
               <div class="element__footer">
-                <div class="element__text-heart">
-                  <p class="element__text">Домбай</p>
-                  <div class="element__heart"></div>
-                </div>
+                <h2 class="element__text">Домбай</h2>
+                <button class="element__heart" type="image"></button>
               </div>
             </li>
             <li class="element__card">
-              <img
-                class="element__photo"
-                src="./images/Гора_Эльбрус01.jpg"
-                alt="Карачаевск"
-              />
+              <img class="element__photo" src="./images/gora_elbrus01.jpg" alt="Карачаевск" />
               <div class="element__footer">
-                <div class="element__text-heart">
-                  <p class="element__text">Гора Эльбрус</p>
-                  <div class="element__heart"></div>
-                </div>
+                <h2 class="element__text">Гора Эльбрус</h2>
+                <button class="element__heart" type="image"></button>
               </div>
             </li>
             <li class="element__card">
-              <img
-                class="element__photo"
-                src="./images/Домбай01.jpg"
-                alt="Карачаевск"
-              />
+              <img class="element__photo" src="./images/dombai01.jpg" alt="Карачаевск" />
               <div class="element__footer">
-                <div class="element__text-heart">
-                  <p class="element__text">Домбай</p>
-                  <div class="element__heart"></div>
-                </div>
+                <h2 class="element__text">Домбай</h2>
+                <button class="element__heart" type="image"></button>
               </div>
             </li>
             <li class="element__card">
-              <img
-                class="element__photo"
-                src="./images/Карачаевск01.jpg"
-                alt="Карачаевск"
-              />
+              <img class="element__photo" src="./images/Karachaevo_Cherkesiya01.jpg" alt="Карачаевск" />
               <div class="element__footer">
-                <div class="element__text-heart">
-                  <p class="element__text">Карачаево-Черкесия</p>
-                  <div class="element__heart"></div>
-                </div>
+                <h2 class="element__text">Карачаево-Черкесия</h2>
+                <button class="element__heart" type="image"></button>
               </div>
             </li>
           </ul>
         </section>
       </main>
       <footer class="footer">
-        <div class="footer__author">© 2021. Павел Гуров</div>
+        <p class="footer__author">© 2021. Павел Гуров</p>
       </footer>
     </div>
-    <section class="popup">
-      <div class="popup__opened">
+    <div class="popup">
         <div class="popup__container">
-          <img
-            src="./images/закрывающийКрестик.svg"
-            alt="закрывающий окно крестик"
-            class="popup__close"
-          />
+          <button class="popup__close" type="reset"></button>
           <h2 class="popup__title">Редактировать профиль</h2>
-          <form class="popup__form">
-            <input class="popup__name" type="text" value="Жак-Ив Кусто" />
-            <input
-              class="popup__job"
-              type="text"
-              value="Исследователь океана"
-            />
-            <button class="popup__submit">Сохранить</button>
+          <form class="popup__form" name="form">
+            <input class="popup__input popup__input_author_name" type="text" name = "name" required value="Жак-Ив Кусто" />
+            <input class="popup__input popup__input_author_job" type="text" name= "job" required value="Исследователь океана" />
+            <button class="popup__submit" type = "submit">Сохранить</button>
           </form>
         </div>
-      </div>
-    </section>
+    </div>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

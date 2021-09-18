@@ -1,0 +1,20 @@
+.element__heart {
+  background-image: url("../../../images/serdce.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  padding: 0;
+  width: 22px;
+  height: 19px;
+}
+
+.element__heart:hover {
+  opacity: 0.5;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+
+.element__heart:active {
+  background-image: url("../../../images/serdce_chernoe.svg");
+  transition: 0.3s all;
+}

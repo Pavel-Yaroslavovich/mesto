@@ -1,7 +1,14 @@
 .popup__close {
+  background-image: url("../../../images/zakrivayuschii_krestik.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
   position: absolute;
+  padding: 0;
   right: -38px;
   top: -38px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
 }
 
@@ -12,8 +19,11 @@
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .popup__close {
-    right: -28px;
-    top: -28px;
+    background-image: url("../../../images/close_icon20x20.svg");
+    width: 20px;
+    height: 20px;
+    right: 0;
+    top: -36px;
     max-width: 20px;
   }
 }
