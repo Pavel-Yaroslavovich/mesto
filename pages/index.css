@@ -26,11 +26,11 @@
 
 /*===element-list===*/
 @import url(../blocks/element-list/element-list.css);
-@import url(../blocks/element-list/__card/element__card.css);
-@import url(../blocks/element-list/__photo/element__photo.css);
-@import url(../blocks/element-list/__footer/element__footer.css);
-@import url(../blocks/element-list/__text/element__text.css);
-@import url(../blocks/element-list/__heart/element__heart.css);
+@import url(../blocks/element-list/__card/element-list__card.css);
+@import url(../blocks/element-list/__photo/element-list__photo.css);
+@import url(../blocks/element-list/__footer/element-list__footer.css);
+@import url(../blocks/element-list/__text/element-list__text.css);
+@import url(../blocks/element-list/__heart/element-list__heart.css);
 
 /*===footer===*/
 @import url(../blocks/footer/footer.css);
