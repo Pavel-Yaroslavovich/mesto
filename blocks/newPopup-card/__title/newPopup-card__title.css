@@ -1,0 +1,14 @@
+.newPopup-card__title {
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 29px;
+  margin-top: 0;
+  margin-bottom: 54px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .newPopup-card__title {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 75px;
+  }
+}

@@ -23,50 +23,7 @@
           <button class="profile__add-button" type="button"></button>
         </section>
         <section class="elements">
-          <ul class="element-list">
-            <li class="element-list__card">
-              <img class="element-list__photo" src="./images/karachaevsk.jpg" alt="Карачаевск" />
-              <div class="element-list__footer">
-                <h2 class="element-list__text">Карачаевск</h2>
-                <button class="element-list__heart" type="button"></button>
-              </div>
-            </li>
-            <li class="element-list__card">
-              <img class="element-list__photo" src="./images/gora_elbrus.jpg" alt="Карачаевск" />
-              <div class="element-list__footer">
-                <h2 class="element-list__text">Гора Эльбрус</h2>
-                <button class="element-list__heart" type="button"></button>
-              </div>
-            </li>
-            <li class="element-list__card">
-              <img class="element-list__photo" src="./images/dombai.jpg" alt="Карачаевск" />
-              <div class="element-list__footer">
-                <h2 class="element-list__text">Домбай</h2>
-                <button class="element-list__heart" type="button"></button>
-              </div>
-            </li>
-            <li class="element-list__card">
-              <img class="element-list__photo" src="./images/gora_elbrus01.jpg" alt="Карачаевск" />
-              <div class="element-list__footer">
-                <h2 class="element-list__text">Гора Эльбрус</h2>
-                <button class="element-list__heart" type="button"></button>
-              </div>
-            </li>
-            <li class="element-list__card">
-              <img class="element-list__photo" src="./images/dombai01.jpg" alt="Карачаевск" />
-              <div class="element-list__footer">
-                <h2 class="element-list__text">Домбай</h2>
-                <button class="element-list__heart" type="button"></button>
-              </div>
-            </li>
-            <li class="element-list__card">
-              <img class="element-list__photo" src="./images/Karachaevo_Cherkesiya01.jpg" alt="Карачаевск" />
-              <div class="element-list__footer">
-                <h2 class="element-list__text">Карачаево-Черкесия</h2>
-                <button class="element-list__heart" type="button"></button>
-              </div>
-            </li>
-          </ul>
+          <ul class="element-list"></ul>
         </section>
       </main>
       <footer class="footer">
@@ -74,16 +31,50 @@
       </footer>
     </div>
     <div class="popup">
-        <div class="popup__container">
-          <button class="popup__close" type="button"></button>
-          <h2 class="popup__title">Редактировать профиль</h2>
-          <form class="popup__form" name="edit-profile">
-            <input class="popup__input popup__input_author_name" type="text" name = "name" required value="Жак-Ив Кусто" />
-            <input class="popup__input popup__input_author_job" type="text" name= "job" required value="Исследователь океана" />
-            <button class="popup__submit" type = "submit">Сохранить</button>
-          </form>
-        </div>
+      <div class="popup__container">
+        <button class="popup__close" type="button"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form class="popup__form" name="edit-profile">
+          <input class="popup__input popup__input_author_name" type="text" name = "name" required value="Жак-Ив Кусто" />
+          <input class="popup__input popup__input_author_job" type="text" name= "job" required value="Исследователь океана" />
+          <button class="popup__submit" type = "submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <div class="newPopup-card">
+      <div class="newPopup-card__container">
+        <button class="newPopup-card__close" type="button"></button>
+        <h2 class="newPopup-card__title">Новое место</h2>
+        <form class="newPopup-card__form" name="edit-profile">
+          <input class="newPopup-card__input newPopup-card__input_name" type="text" name = "name" required
+          placeholder = "Название" value="" />
+          <input class="newPopup-card__input newPopup-card__input_link" type="url" name= "link" required
+          placeholder = "Ссылка на картинку" value="" />
+          <button class="newPopup-card__submit" type = "submit">Создать</button>
+        </form>
+      </div>
+    </div>
+    <template id="card-template">
+      <li class="list-card">
+        <img class="list-card__photo" src="#" alt="изображение" />
+        <button class="list-card__basket list-card__basket_delete" type="button"></button>
+          <div class="list-card__footer">
+            <h2 class="list-card__text"></h2>
+            <button class="list-card__heart list-card__heart_active" type="button"></button>
+          </div>
+        </li>
+    </template>
+    <div class="popup-picture">
+      <div class="popup-picture__container">
+        <button class="popup-picture__close" type="button"></button>
+        <img class="popup-picture__img" src="#" alt="изображение">
+        <h2 class="popup-picture__title"></h2>
+      </div>
     </div>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
+
+
+
+

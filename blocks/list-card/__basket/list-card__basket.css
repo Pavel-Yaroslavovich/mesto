@@ -1,0 +1,15 @@
+.list-card__basket {
+background-image: url('../../../images/basket.svg');
+background-color: transparent;
+width: 18px;
+height: 19px;
+position: absolute;
+right: 10px;
+top: 15px;
+border: none;
+cursor: pointer;
+}
+
+.list-card__basket:hover {
+  opacity: 0.6;
+}
