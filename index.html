@@ -30,7 +30,7 @@
         <p class="footer__author">&copy; 2021. Павел Гуров</p>
       </footer>
     </div>
-    <div class="popup">
+    <div class="popup popup_type_edit">
       <div class="popup__container">
         <button class="popup__close" type="button"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
@@ -41,40 +41,36 @@
         </form>
       </div>
     </div>
-    <div class="newPopup-card">
-      <div class="newPopup-card__container">
-        <button class="newPopup-card__close" type="button"></button>
-        <h2 class="newPopup-card__title">Новое место</h2>
-        <form class="newPopup-card__form" name="edit-profile">
-          <input class="newPopup-card__input newPopup-card__input_name" type="text" name = "name" required
+    <div class="popup popup_type_add">
+      <div class="popup__container">
+        <button class="popup__close" type="button"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form class="popup__form" name="edit-profile">
+          <input class="popup__input popup__input_name" type="text" name = "name" required
           placeholder = "Название" value="" />
-          <input class="newPopup-card__input newPopup-card__input_link" type="url" name= "link" required
+          <input class="popup__input popup__input_link" type="url" name= "link" required
           placeholder = "Ссылка на картинку" value="" />
-          <button class="newPopup-card__submit" type = "submit">Создать</button>
+          <button class="popup__submit" type = "submit">Создать</button>
         </form>
+      </div>
+    </div>
+    <div class="popup popup_type_image">
+      <div class="popup__container popup__container_type_image">
+        <button class="popup__close" type="button"></button>
+        <img class="popup__img" src="#" alt="изображение">
+        <h2 class="popup__img-title"></h2>
       </div>
     </div>
     <template id="card-template">
       <li class="list-card">
         <img class="list-card__photo" src="#" alt="изображение" />
         <button class="list-card__basket list-card__basket_delete" type="button"></button>
-          <div class="list-card__footer">
-            <h2 class="list-card__text"></h2>
-            <button class="list-card__heart list-card__heart_active" type="button"></button>
-          </div>
-        </li>
+        <div class="list-card__footer">
+          <h2 class="list-card__text"></h2>
+          <button class="list-card__heart list-card__heart_active" type="button"></button>
+        </div>
+      </li>
     </template>
-    <div class="popup-picture">
-      <div class="popup-picture__container">
-        <button class="popup-picture__close" type="button"></button>
-        <img class="popup-picture__img" src="#" alt="изображение">
-        <h2 class="popup-picture__title"></h2>
-      </div>
-    </div>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
-
-
-
-

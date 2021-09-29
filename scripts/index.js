@@ -1,4 +1,4 @@
-const popup = document.querySelector(".popup");
+const popup = document.querySelector(".popup_type_edit");
 const popupOpenBtn = document.querySelector(".profile__edit-button");
 const popupCloseBtn = popup.querySelector(".popup__close");
 
@@ -33,16 +33,16 @@ formElement.addEventListener("submit", formSubmitHandler);
 
 /*==========================================Proekt 5=================================================== */
 
-const newPopupCard = document.querySelector(".newPopup-card");
+const newPopupCard = document.querySelector(".popup_type_add");
 const newPopupOpenBtn = document.querySelector(".profile__add-button");
-const newPopupCloseBtn = newPopupCard.querySelector(".newPopup-card__close");
+const newPopupCloseBtn = newPopupCard.querySelector(".popup__close");
 
 function newOpenPopup() {
-  newPopupCard.classList.add("newPopup-card_opened");
+  newPopupCard.classList.add("popup_opened");
 }
 
 function newClosePopup() {
-  newPopupCard.classList.remove("newPopup-card_opened");
+  newPopupCard.classList.remove("popup_opened");
 }
 
 newPopupOpenBtn.addEventListener("click", newOpenPopup);
@@ -77,7 +77,7 @@ const initialCards = [
 
 const elementLists = document.querySelector(".element-list");
 const elementCard = document.querySelector("#card-template");
-const newPopupCar = document.querySelector(".newPopup-card");
+const newPopupCar = document.querySelector(".popup_type_add");
 
 function renderElement(elementText) {
   const newCard = elementCard.content.cloneNode(true);
@@ -98,8 +98,8 @@ function renderElement(elementText) {
 
 function addElement(event) {
   event.preventDefault();
-  const newPopupTextName = event.currentTarget.querySelector(".newPopup-card__input_name").value;
-  const newPopupUrlLink = event.currentTarget.querySelector(".newPopup-card__input_link").value;
+  const newPopupTextName = event.currentTarget.querySelector(".popup__input_name").value;
+  const newPopupUrlLink = event.currentTarget.querySelector(".popup__input_link").value;
   const obj = {
     name: newPopupTextName,
     link: newPopupUrlLink,
@@ -123,19 +123,19 @@ initialCards.map(renderElement);
 
 newPopupCar.addEventListener("submit", addElement);
 /*------------------------------------------------------ увеличение картинки */
-const popupPicture = document.querySelector(".popup-picture");
-const popupOpenPicture = document.querySelector(".popup-picture__img");
-const popupClosePicture = popupPicture.querySelector(".popup-picture__close");
+const popupPicture = document.querySelector(".popup_type_image");
+const popupOpenPicture = document.querySelector(".popup__img");
+const popupClosePicture = popupPicture.querySelector(".popup__close");
 
 function OpenPopupPicture(elementPicture) {
-  popupPicture.querySelector(".popup-picture__title").textContent = elementPicture.name;
+  popupPicture.querySelector(".popup__img-title").textContent = elementPicture.name;
   popupOpenPicture.setAttribute("src", elementPicture.link);
 
-  popupPicture.classList.add("popup-picture_opened");
+  popupPicture.classList.add("popup_opened");
 }
 
 function ClosePopupPicture() {
-  popupPicture.classList.remove("popup-picture_opened");
+  popupPicture.classList.remove("popup_opened");
 }
 
 popupClosePicture.addEventListener("click", ClosePopupPicture);

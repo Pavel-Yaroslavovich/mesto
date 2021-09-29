@@ -46,8 +46,10 @@
 
 /*===popup===*/
 @import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/_type/popup_type_edit.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__container/_type/popup__container_type_image.css);
 @import url(../blocks/popup/__close/popup__close.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/__form/popup__form.css);
@@ -55,25 +57,7 @@
 @import url(../blocks/popup/__input/_author/popup__input_author_name.css);
 @import url(../blocks/popup/__input/_author/popup__input_author_job.css);
 @import url(../blocks/popup/__submit/popup__submit.css);
-
-/*===newPopup-card===*/
-@import url(../blocks/newPopup-card/newPopup-card.css);
-@import url(../blocks/newPopup-card/_opened/newPopup-card_opened.css);
-@import url(../blocks/newPopup-card/__container/newPopup-card__container.css);
-@import url(../blocks/newPopup-card/__close/newPopup-card__close.css);
-@import url(../blocks/newPopup-card/__title/newPopup-card__title.css);
-@import url(../blocks/newPopup-card/__form/newPopup-card__form.css);
-@import url(../blocks/newPopup-card/__input/newPopup-card__input.css);
-@import url(../blocks/newPopup-card/__input/_name/newPopup-card__input_name.css);
-@import url(../blocks/newPopup-card/__input/_link/newPopup-card__input_link.css);
-@import url(../blocks/newPopup-card/__submit/newPopup-card__submit.css);
-
-/*===picture===*/
-@import url(../blocks/popup-picture/popup-picture.css);
-@import url(../blocks/popup-picture/__container/popup-picture__container.css);
-@import url(../blocks/popup-picture/__close/popup-picture__close.css);
-@import url(../blocks/popup-picture/__img/popup-picture__img.css);
-@import url(../blocks/popup-picture/__title/popup-picture__title.css);
-@import url(../blocks/popup-picture/_opened/popup-picture_opened.css);
+@import url(../blocks/popup/__img/popup__img.css);
+@import url(../blocks/popup/__img-title/popup__img-title.css);
 
 
