@@ -9,14 +9,17 @@
   color: #ffffff;
   text-overflow: ellipsis;
   max-width: 294px;
+  min-width: 294px;
   overflow: hidden;
   white-space: nowrap;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .profile__name {
+    text-align: center;
     margin-top: 0;
     max-width: 189px;
+    min-width: 189px;
     font-size: 27px;
     line-height: 33px;
     margin-right: 10px;
