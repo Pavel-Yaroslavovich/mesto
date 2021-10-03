@@ -10,31 +10,30 @@ const formElement = document.querySelector(".popup__form");
 const nameInput = formElement.querySelector(".popup__input_author_name");
 const jobInput = formElement.querySelector(".popup__input_author_job");
 
-nameInput.value = profileName.textContent;
-jobInput.value = profileJob.textContent;
 
 function openPopup(popup) {
-	popup.classList.add('popup_opened');
+  popup.classList.add('popup_opened');
 }
 
 function closePopup(popup) {
-	popup.classList.remove("popup_opened");
+  popup.classList.remove("popup_opened");
 }
 
 function openProfilePopup() {
-	openPopup(profilePopup);
+  nameInput.value = profileName.textContent;
+  jobInput.value = profileJob.textContent;
+  openPopup(profilePopup);
 }
 
 function closeProfilePopup() {
-	closePopup(profilePopup);
+  closePopup(profilePopup);
 }
 
 function formSubmitHandler(evt) {
-	evt.preventDefault();
-	profileName.textContent = nameInput.value;
-	profileJob.textContent = jobInput.value;
-	closeProfilePopup();
-	evt.target.reset();
+  evt.preventDefault();
+  profileName.textContent = nameInput.value;
+  profileJob.textContent = jobInput.value;
+  closeProfilePopup();
 }
 
 popupOpenBtn.addEventListener("click", openProfilePopup);
@@ -48,41 +47,41 @@ const newPopupOpenBtn = document.querySelector(".profile__add-button");
 const newPopupCloseBtn = newPopupCard.querySelector(".popup__close");
 
 function newOpenPopup() {
-	openPopup(newPopupCard);
+  openPopup(newPopupCard);
 }
 
 function newClosePopup() {
-	closePopup(newPopupCard);
+  closePopup(newPopupCard);
 }
 
 newPopupOpenBtn.addEventListener("click", newOpenPopup);
 newPopupCloseBtn.addEventListener("click", newClosePopup);
 
 const initialCards = [
-	{
-		name: "Архыз",
-		link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
-	},
-	{
-		name: "Челябинская область",
-		link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
-	},
-	{
-		name: "Иваново",
-		link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
-	},
-	{
-		name: "Камчатка",
-		link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
-	},
-	{
-		name: "Холмогорский район",
-		link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
-	},
-	{
-		name: "Байкал",
-		link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
-	},
+  {
+    name: "Архыз",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
+  },
+  {
+    name: "Челябинская область",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
+  },
+  {
+    name: "Иваново",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
+  },
+  {
+    name: "Камчатка",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
+  },
+  {
+    name: "Холмогорский район",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
+  },
+  {
+    name: "Байкал",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
+  },
 ];
 
 const elementLists = document.querySelector(".element-list");
@@ -90,46 +89,47 @@ const elementCard = document.querySelector("#card-template");
 const newPopupCar = document.querySelector(".popup_type_add");
 
 function createCard(elementText) {
-	const newCard = elementCard.content.cloneNode(true);
-	newCard.querySelector(".list-card__text").textContent = elementText.name;
-	newCard.querySelector(".list-card__photo").setAttribute("src", elementText.link);
+  const newCard = elementCard.content.cloneNode(true);
+  newCard.querySelector(".list-card__text").textContent = elementText.name;
+  newCard.querySelector(".list-card__photo").setAttribute("src", elementText.link);
+  newCard.querySelector(".list-card__photo").setAttribute("alt", elementText.name);
 
-	newCard.querySelector(".list-card__photo").addEventListener("click", function () {
-		openPopupPicture(elementText);
-	});
+  newCard.querySelector(".list-card__photo").addEventListener("click", function () {
+    openPopupPicture(elementText);
+  });
 
-	newCard.querySelector(".list-card__heart").addEventListener("click", function (evt) {
-		evt.target.classList.toggle("list-card__heart_active");
-	});
+  newCard.querySelector(".list-card__heart").addEventListener("click", function (evt) {
+    evt.target.classList.toggle("list-card__heart_active");
+  });
 
-	newCard.querySelector(".list-card__basket_delete").addEventListener("click", deleteCard);
+  newCard.querySelector(".list-card__basket_delete").addEventListener("click", deleteCard);
 
-	return newCard;
+  return newCard;
 }
 
 function renderElement(elementText) {
-	const card = createCard(elementText);
-	elementLists.prepend(card);
+  const card = createCard(elementText);
+  elementLists.prepend(card);
 }
 
 function addElement(event) {
-	event.preventDefault();
-	const newPopupTextName = event.currentTarget.querySelector(".popup__input_name").value;
-	const newPopupUrlLink = event.currentTarget.querySelector(".popup__input_link").value;
-	const obj = {
-		name: newPopupTextName,
-		link: newPopupUrlLink,
-	};
+  event.preventDefault();
+  const newPopupTextName = event.currentTarget.querySelector(".popup__input_name").value;
+  const newPopupUrlLink = event.currentTarget.querySelector(".popup__input_link").value;
+  const obj = {
+    name: newPopupTextName,
+    link: newPopupUrlLink,
+  };
 
-	renderElement(obj);
-	newClosePopup();
-	event.target.reset();
+  renderElement(obj);
+  newClosePopup();
+  event.target.reset();
 }
 
 function deleteCard(event) {
-	const card = event.currentTarget.closest(".list-card");
+  const card = event.currentTarget.closest(".list-card");
 
-	card.remove();
+  card.remove();
 }
 
 initialCards.map(renderElement);
@@ -141,14 +141,14 @@ const popupOpenPicture = document.querySelector(".popup__img");
 const popupClosePicture = popupPicture.querySelector(".popup__close");
 
 function openPopupPicture(elementPicture) {
-	popupPicture.querySelector(".popup__img-title").textContent = elementPicture.name;
-	popupOpenPicture.setAttribute("src", elementPicture.link);
+  popupPicture.querySelector(".popup__img-title").textContent = elementPicture.name;
+  popupOpenPicture.setAttribute("src", elementPicture.link);
 
-	openPopup(popupPicture);
+  openPopup(popupPicture);
 }
 
 function closePopupPicture() {
-	closePopup(popupPicture);
+  closePopup(popupPicture);
 }
 
 popupClosePicture.addEventListener("click", closePopupPicture);
