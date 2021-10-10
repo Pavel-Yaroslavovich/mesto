@@ -1,0 +1,10 @@
+.error {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+  display: block;
+  margin: 5px 0 13px 0;
+  box-sizing: border-box;
+  height: 25px;
+}
