@@ -4,3 +4,8 @@
   width: 282px;
   height: 282px;
 }
+
+.list-card__photo:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
